@@ -1,23 +1,24 @@
 # Bank Customer Churn Prediction  
-*Machine Learning Project – Semester 2, 2024*  
+*Machine Learning Project – Semester 3, 2024*  
 
 ---
 
 ## Overview  
-This project focuses on predicting **bank customer churn** using supervised machine learning.  
-The dataset is sourced from Kaggle:  
-[Bank Customer Churn Dataset](https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset/data)  
+This project applies machine learning to predict **bank customer churn** using a real dataset from Kaggle:  
+[Bank Customer Churn Dataset](https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset/data).  
 
-Customer churn is a key challenge for banks as it directly impacts revenue and growth. The goal of this project is to analyze customer demographics and financial attributes to identify which customers are most likely to leave, and build a predictive model that helps in designing retention strategies.  
+Customer churn is a critical issue for banks as it impacts revenue, customer lifetime value, and long-term growth. The aim is to analyze customer demographics, financial data, and account activity to build a model that identifies customers at risk of leaving, enabling proactive retention strategies.  
 
 ---
 
 ## Key Insights  
 - The dataset is **imbalanced**: more customers stay than churn.  
-- **Age, number of products, and account balance** are strong predictors of churn.  
-- Customers who are **inactive** or do not hold a credit card are more likely to churn.  
-- **Geography and gender** also influence churn behavior.  
-- Predictive models achieve good performance, making it possible to target at-risk customers.  
+- **Key churn drivers**:  
+  - Older customers with fewer bank products.  
+  - Customers who are inactive or lack a credit card.  
+  - Geography and gender differences influence churn rates.  
+- A **Random Forest Classifier** performed well and was further optimized with **GridSearchCV** and **threshold adjustment**.  
+- ROC AUC of **0.81** shows the model can distinguish churners from non-churners effectively.  
 
 ---
 
@@ -49,10 +50,38 @@ Customer churn is a key challenge for banks as it directly impacts revenue and g
 ---
 
 ## Results  
-- **Correlation**: Older customers with fewer bank products are more likely to churn.  
-- **Geography Impact**: Certain regions have higher churn rates than others.  
-- **Engagement Factor**: Active members and credit card holders churn less often.  
-- **Model Performance**: The best model achieved strong predictive results, showing practical value for churn prediction.  
+
+### Baseline Random Forest  
+- **Test Accuracy**: 0.85  
+- **Classification Report**:  
+- Precision (Class 0: stayed): 0.88 | Recall: 0.95 | F1: 0.91  
+- Precision (Class 1: churned): 0.68 | Recall: 0.45 | F1: 0.54  
+- Weighted Avg F1: 0.84  
+
+---
+
+### After GridSearchCV (Best Parameters)  
+- **Test Accuracy**: 0.837  
+- **Classification Report**:  
+- Precision (Stayed): 0.88 | Recall: 0.93 | F1: 0.90  
+- Precision (Churned): 0.61 | Recall: 0.47 | F1: 0.53  
+- Weighted Avg F1: 0.83  
+
+---
+
+### With Optimal Threshold (0.24, maximizing recall for churn)  
+- **Test Accuracy**: 0.77  
+- **Classification Report**:  
+- Precision (Stayed): 0.92 | Recall: 0.79 | F1: 0.85  
+- Precision (Churned): 0.45 | Recall: 0.71 | F1: 0.55  
+- Weighted Avg F1: 0.79  
+
+---
+
+### ROC Curve  
+- **AUC = 0.81**  
+- Indicates the model performs **fairly well** at distinguishing churners vs non-churners.  
+- AUC closer to 1.0 would be perfect; 0.5 would indicate random guessing.  
 
 ---
 
@@ -63,6 +92,6 @@ Customer churn is a key challenge for banks as it directly impacts revenue and g
 
 ### Steps  
 1. Clone this repository:  
-   ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+ ```bash
+ git clone https://github.com/yourusername/your-repo-name.git
+ cd your-repo-name
