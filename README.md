@@ -89,9 +89,3 @@ Customer churn is a critical issue for banks as it impacts revenue, customer lif
 ### Requirements  
 - Python (≥ 3.8)  
 - Packages: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `imbalanced-learn`  
-
-### Steps  
-1. Clone this repository:  
- ```bash
- git clone https://github.com/yourusername/your-repo-name.git
- cd your-repo-name
