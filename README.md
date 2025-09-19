@@ -35,7 +35,7 @@ Customer churn is a critical issue for banks as it impacts revenue, customer lif
 1. **Exploratory Data Analysis (EDA)**
    - Check on Missing Values, Duplicated Values, Unique Values, Outliers of data
    - Distribution of churn vs non-churn across features.
-   - Distribution of numerical columns
+   - Distribution of numerical columns.
    - Correlation analysis between  variables and target (churn).
      
 3. **Data Preprocessing**  
@@ -45,8 +45,8 @@ Customer churn is a critical issue for banks as it impacts revenue, customer lif
 
 4. **Modeling & Evaluation**  
    - Trained classification models with RandomForestClassifier.
-   - Fine tuned with GridSearchCV
-   - Evaluated using Confusion Matrix, Accuracy, Precision, Recall, and F1-score, ROC 
+   - Fine tuned with GridSearchCV.
+   - Evaluated using Confusion Matrix, Accuracy, Precision, Recall, and F1-score, and  ROC Curve.
 ---
 
 ## Results  
