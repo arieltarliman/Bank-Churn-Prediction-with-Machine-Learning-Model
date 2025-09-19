@@ -1,8 +1,6 @@
 # Bank Customer Churn Prediction  
 *Machine Learning Project – Semester 2, 2024*  
 
-![Notebook Preview](./src/2702234636-ArieldhiptaTarliman_GSLC.ipynb)
-
 ---
 
 ## Overview  
@@ -33,20 +31,21 @@ Customer churn is a key challenge for banks as it directly impacts revenue and g
 ---
 
 ## Methods  
-1. **Data Preprocessing**  
-   - Encoding categorical variables (Gender, Geography).  
-   - Checking for missing values and data imbalances.  
-   - Feature scaling and normalization where required.  
+1. **Exploratory Data Analysis (EDA)**
+   - Check on Missing Values, Duplicated Values, Unique Values, Outliers of data
+   - Distribution of churn vs non-churn across features.
+   - Distribution of numerical columns
+   - Correlation analysis between  variables and target (churn).
+     
+3. **Data Preprocessing**  
+   - One Hot Encoding categorical variables (Gender, Geography).  
+   - Robust Scaling for numerical variables.
+   - Ordinal encoding for ordinal features.
 
-2. **Exploratory Data Analysis (EDA)**  
-   - Distribution of churn vs non-churn across features.  
-   - Correlation analysis between demographic/financial variables and churn.  
-
-3. **Modeling & Evaluation**  
-   - Trained classification models such as Logistic Regression, Decision Tree, and Random Forest.  
-   - Evaluated using Accuracy, Precision, Recall, and F1-score.  
-   - Compared results to determine the best performing model.  
-
+4. **Modeling & Evaluation**  
+   - Trained classification models with RandomForestClassifier.
+   - Fine tuned with GridSearchCV
+   - Evaluated using Confusion Matrix, Accuracy, Precision, Recall, and F1-score, ROC 
 ---
 
 ## Results  
