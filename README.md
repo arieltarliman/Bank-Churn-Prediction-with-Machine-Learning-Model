@@ -1,7 +1,7 @@
 # Bank Customer Churn Prediction  
 *Machine Learning Project – Semester 2, 2024*  
 
-![Notebook Preview](./data/2702234636-ArieldhiptaTarliman_GSLC.ipynb)
+![Notebook Preview](./src/2702234636-ArieldhiptaTarliman_GSLC.ipynb)
 
 ---
 
@@ -24,10 +24,10 @@ Customer churn is a key challenge for banks as it directly impacts revenue and g
 ---
 
 ## Files in this Repository  
-- **[`data/2702234636-ArieldhiptaTarliman_GSLC.ipynb`](./data/2702234636-ArieldhiptaTarliman_GSLC.ipynb)**  
+- **[`data/2702234636-ArieldhiptaTarliman_GSLC.ipynb`](./src/2702234636-ArieldhiptaTarliman_GSLC.ipynb)**  
   Jupyter Notebook with preprocessing, EDA, modeling, and evaluation.  
 
-- **[`src/Bank Customer Churn Prediction.csv`](./src/Bank%20Customer%20Churn%20Prediction.csv)**  
+- **[`src/Bank Customer Churn Prediction.csv`](./data/Bank%20Customer%20Churn%20Prediction.csv)**  
   Dataset used in this project, downloaded from Kaggle.  
 
 ---
